@@ -11,6 +11,8 @@ class WelcomeController extends Controller
         return 'Hello World';
     }
     public function greeting(){
-        return view('blog.hello', ['name' => 'Rensi']);
+        return view('blog.hello')
+        ->with('name', 'Rensi')
+        ->with('occupation', 'UI/UX Designer');
     }
 }
